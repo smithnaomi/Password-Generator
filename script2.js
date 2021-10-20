@@ -67,7 +67,9 @@ function generatePassword(){
       }
 
 
-      
+      function generatePassword(){
+        return "";
+      }   
 
 }
 var generateBtn = document.querySelector("#generate");
