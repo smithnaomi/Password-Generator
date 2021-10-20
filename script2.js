@@ -29,21 +29,21 @@ function passwordoptions() {
      length:length,
      upperCasechoice: upperCasechoice,
      lowerCasechoice: lowerCasechoice,
-     numberChoice:numberChoice,
+     numberChoice: numberChoice,
      specialChoice: specialChoice,
  }
  return passwordoptionsobject;
 } 
 function gettingRandomElements(arr) {
-   var index = Math.floor(math.random()* arr.length)
+   var index = Math.floor(Math.random()* arr.length)
    var randomCharacter= arr[index]
    return randomCharacter
 }
 function generatePassword(){
-    var options= passwordoptions()
-    var results= [];
-    var possibleCharacters= [];
-    var guranttedCharcaters= [];
+    var options = passwordoptions()
+    var results = [];
+    var possibleCharacters = [];
+    var guranttedCharcaters = [];
     
     
     if (options.upperCasechoice) {
@@ -57,19 +57,34 @@ function generatePassword(){
       }
 
     if (options.specialChoice) {
-        possibleCharacters= possibleCharacters.concat(specialChoice) 
-        guranttedCharcaters.push(gettingRandomElements(specialChoice)) 
+        possibleCharacters= possibleCharacters.concat(special) 
+        guranttedCharcaters.push(gettingRandomElements(special)) 
       }
 
     if (options.numberChoice) {
-        possibleCharacters= possibleCharacters.concat(numberChoice) 
-        guranttedCharcaters.push(gettingRandomElements(numberChoice)) 
+        possibleCharacters= possibleCharacters.concat(numbers) 
+        guranttedCharcaters.push(gettingRandomElements(numbers)) 
       }
 
 
-      function generatePassword(){
-        return "";
-      }   
+      for(var i= 0; i< options.length; i++){
+          var possibleChar= gettingRandomElements(possibleCharacters)
+          results.push(possibleChar)
+      }
+      for(var i=0; i< guranttedCharcaters.length; i++){
+results[i] = guranttedCharcaters[i]
+      }
+          return results.join('')
+      
+
+
 
 }
 var generateBtn = document.querySelector("#generate");
+
+function writepassword () {
+    var password= generatePassword()
+    var passwordCharacters = document.querySelector('#password')
+    passwordCharacters.value=password
+}
+generateBtn.addEventListener('click', writepassword);
