@@ -3,7 +3,7 @@
 
 ## Overview 
 
-<p> An employee with access will be able to generate a strong password based off given criteria. When directed to generate a password the user will be prompted to select the criteria to create this personal secure strong password. Will user's password contain uppercase letters, lowercase letters, special characters and numbers? Once prompted through the criteria, the password will be generated and be displayed on the written page. The script.js was challenging working with if statements and for. These concepts are clear due to the assignment.<p>
+<p> An employee with access will be able to generate a strong password based off given criteria. When directed to generate a password the user will be prompted to select the criteria to create this personal strong password. The user will select if the password will contain uppercase letters, lowercase letters, special characters and numbers. Once prompted through the criteria, the password will be generated and be displayed on the written page. The script.js was challenging, working with if statements and for. Understanding what and why certain methods were called was very exciting to see run. These concepts are now clear due to this assignment.<p>
 
 ## Demo 
 ![Password Generator](assets/03-javascript-homework-demo.png)
